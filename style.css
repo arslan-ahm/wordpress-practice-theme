@@ -1,0 +1,151 @@
+/**
+ * Theme Name:        Cool Cooks
+ * Theme URI:         https://example.com/cool-cooks
+ * Description:       A professional and modern theme tailored for fast food restaurants and quick service eateries. This theme offers a sleek and responsive design that ensures your website looks great on all devices. With customizable features and easy-to-use options, you can create a unique and engaging online presence for your restaurant.
+ * Version:           1.0.0
+ * Author:            ARslan Ahmad
+ * Author URI:        https://github.com/arslan-ahm
+ * Tags:              fast-food, restaurant, quick-service, block-patterns, full-site-editing
+ * Text Domain:       cool-cooks
+ * Domain Path:       /assets/lang
+ * Tested up to:      6.4
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+:root {
+  --primary-color: #ff6347; /* Tomato */
+  --secondary-color: #2c3e50; /* Dark Blue */
+  --text-color: #ffffff; /* White */
+  --background-color: #34495e; /* Darker Blue */
+  --link-color: #ecf0f1; /* Light Gray */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Primary Menu */
+header {
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+}
+
+.primary-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.primary-menu li {
+  list-style: none;
+  margin: 0 10px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* .current-menu-item a {
+  color: var(--primary-color);
+} */
+
+.primary-menu li a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 20px 0;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.footer-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  color: var(--link-color);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
